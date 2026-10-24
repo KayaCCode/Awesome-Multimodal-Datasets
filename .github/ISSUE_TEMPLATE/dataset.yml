@@ -1,0 +1,23 @@
+name: Dataset addition or correction
+description: Suggest a traceable dataset release or improve an existing record.
+body:
+  - type: input
+    id: release
+    attributes:
+      label: Dataset name and official release URL
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: Training stage, modalities and supervision
+      description: Distinguish native annotations from generated labels and required adaptations.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, access conditions and release terms
+      description: Include sources and release/split for scale claims. Unknown fields are welcome when explicit.
+    validations:
+      required: true

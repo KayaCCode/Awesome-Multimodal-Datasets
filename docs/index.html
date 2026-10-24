@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore multimodal datasets for pretraining, fine-tuning, preference optimization, reinforcement learning and evaluation.">
+  <meta name="theme-color" content="#153c33">
+  <title>Awesome Multimodal Datasets — Data Explorer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/catalog.js" defer></script><script src="assets/core.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#catalog">Skip to datasets</a>
+<header class="topbar wrap"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">◫</span> MULTIMODAL <span class="brand-light">/ DATASETS</span></a><nav aria-label="Main"><a href="#catalog">Explorer</a><a href="#guide">Field guide</a><a href="https://github.com/KayaCCode/Awesome-Multimodal-Datasets">GitHub ↗</a></nav></header>
+<main>
+<section class="hero wrap">
+ <div><div class="eyebrow"><span class="live-dot"></span> AN OPEN RESEARCH CATALOG</div><h1>Find the data.<br><span>Build what’s next.</span></h1><p class="intro">Explore the building blocks of multimodal intelligence. Choose datasets by training stage, modality and supervision — with sources and verification status in view.</p><a class="primary" href="#catalog">Explore datasets <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/KayaCCode/Awesome-Multimodal-Datasets/blob/main/CONTRIBUTING.md">Contribute a dataset →</a></div>
+ <div class="atlas" aria-label="Connected modalities: vision, language, audio, video, 3D and sensors"><div class="atlas-grid"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span class="atlas-node n1">▧ &nbsp; VISION</span><span class="atlas-node n2">Aa &nbsp; LANGUAGE</span><span class="atlas-node n3">≋ &nbsp; AUDIO</span><span class="atlas-node n4">▷ &nbsp; VIDEO</span><span class="atlas-node n5">◇ &nbsp; 3D + SENSORS</span><div class="atlas-center">M<span>CONNECTED DATA</span></div><span class="atlas-caption">MANY MODALITIES. MORE POSSIBILITIES.</span></div>
+</section>
+<section class="stats wrap" aria-label="Catalog overview"><div><strong id="total-count">—</strong><span>catalog records</span></div><div><strong id="modality-count">—</strong><span>modality tags</span></div><div><strong>06</strong><span>training & evaluation paths</span></div><div><strong id="documented-count">—</strong><span>documentation reviewed</span></div></section>
+<section class="explorer wrap" id="catalog">
+ <div class="section-title"><div><div class="eyebrow">01 / THE EXPLORER</div><h2>Your next dataset starts here.</h2></div><p>Filter, inspect, shortlist.<br>Export the records that fit your work.</p></div>
+ <div class="stage-tabs" id="stage-tabs" role="group" aria-label="Filter by stage"></div>
+ <div class="catalog-layout"><aside class="filters" aria-label="Dataset filters"><div class="filter-heading"><h3>Refine your search</h3><button id="reset" class="link-button" type="button">Reset all</button></div><label for="modality">Modality</label><select id="modality"><option value="">All modalities</option></select><label for="supervision">Supervision source</label><select id="supervision"><option value="">All sources</option></select><label for="category">Topic / domain</label><select id="category"><option value="">All topics</option></select><label for="verification">Evidence</label><select id="verification"><option value="">All records</option><option value="documented">Documentation reviewed</option><option value="pending">Needs verification</option></select><label for="access">Access</label><select id="access"><option value="">All access types</option><option value="unknown">Not verified</option><option value="open">Open release</option><option value="gated">Application / gated</option><option value="source-dependent">Retrieve source media</option><option value="unavailable">Unavailable</option></select><div class="filter-note"><span>READ THE EVIDENCE</span><p>Stage tags suggest candidate uses. Check splits, source conditions and formats before training.</p></div><div class="coverage"><span>STAGE COVERAGE</span><div id="stage-chart"></div><small>Records can appear in more than one stage.</small></div></aside>
+ <div class="results"><div class="search-row"><label class="search-box" for="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search names, tasks, annotations…" autocomplete="off"><kbd>/</kbd></label><label class="sr-only" for="sort">Sort results</label><select id="sort"><option value="name">Name A–Z</option><option value="newest">Newest first</option><option value="evidence">Reviewed first</option></select></div>
+ <div class="result-toolbar"><p id="result-count" role="status" aria-live="polite">Loading catalog…</p><div><button class="small-button" id="export" type="button">Export results ↓</button><button class="small-button" id="share" type="button">Copy link ↗</button></div></div>
+ <p class="evidence-note">Most records are migrated from the original list and await review. “Documentation reviewed” does not mean downloaded or training-validated.</p>
+ <div id="dataset-grid" class="dataset-grid"></div><div id="empty" class="empty" hidden><h3>No datasets match these filters.</h3><p>Try a broader search or reset the filters.</p><button class="primary" type="button" id="empty-reset">Reset filters</button></div>
+ <noscript><p>This explorer needs JavaScript. Browse the <a href="LEGACY_README.md">original list</a> or the repository README instead.</p></noscript>
+ </div></div>
+</section>
+<section id="guide" class="guide wrap"><div class="eyebrow">02 / A FIELD GUIDE</div><h2>A dataset is more than its size.</h2><div class="guide-grid"><article><span>01</span><h3>Know the supervision.</h3><p>Human annotation, measurements and generated labels carry different evidence. Generated answers are useful training signals, but are not independent ground truth.</p></article><article><span>02</span><h3>Protect the evaluation.</h3><p>Inspect splits and upstream sources. A dataset can support training and evaluation, but the examples used for each must remain separate.</p></article><article><span>03</span><h3>Check the actual release.</h3><p>Media may require separate retrieval. Verify the version, license, access process and conversion needed for your model.</p></article></div></section>
+</main>
+<footer class="wrap"><div class="brand">◫ &nbsp; AWESOME MULTIMODAL DATASETS</div><p>Community maintained. Evidence first. <span id="updated"></span></p><a href="https://github.com/KayaCCode/Awesome-Multimodal-Datasets/issues/new">Suggest a correction ↗</a></footer>
+<div id="compare-bar" class="compare-bar" hidden><span id="selected-count"></span><button id="compare" type="button">Compare</button><button id="clear-selection" type="button">Clear</button></div>
+<dialog id="detail-dialog"><div class="dialog-top"><span class="eyebrow">DATASET NOTES</span><button type="button" class="close-dialog" aria-label="Close dialog">×</button></div><div id="detail-content"></div></dialog>
+<dialog id="compare-dialog"><div class="dialog-top"><span class="eyebrow">SIDE BY SIDE</span><button type="button" class="close-dialog" aria-label="Close comparison">×</button></div><div id="compare-content"></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+</body></html>
